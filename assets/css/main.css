@@ -1190,14 +1190,14 @@ h6 {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #fff;
 }
 
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;
   font-size: 14px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .contact .info-item:hover i {
