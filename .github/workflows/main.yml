@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main  # Change this if your main branch has a different name like master
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
 
 jobs:
   deploy:
