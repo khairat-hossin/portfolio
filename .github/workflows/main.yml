@@ -3,7 +3,7 @@ name: Deploy to cPanel via FTP
 on:
   push:
     branches:
-      - main  # Change this if your main branch has a different name like main
+      - main # Change this if your main branch has a different name like main
   pull_request:
     types:
       - closed
@@ -21,7 +21,7 @@ jobs:
       - name: 📂 Deploy Files via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          server: 115.187.18.119
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSORD }}
           exclude: |
