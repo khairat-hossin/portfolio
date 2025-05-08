@@ -29,3 +29,6 @@ jobs:
             **/.git*/**
             **/vendor/**
             **/application/config/app-config.php
+
+      - name: 📦 Install Dependencies
+        run: npm install
