@@ -3,7 +3,7 @@ name: Deploy to cPanel via FTP
 on:
   push:
     branches:
-      - main  # Change this if your main branch has a different name like master
+      - main  # Change this if your main branch has a different name like main
   pull_request:
     types:
       - closed
