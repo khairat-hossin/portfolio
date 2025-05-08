@@ -1,6 +1,13 @@
-# Enable JavaScript module MIME types
+# Enable JavaScript and TypeScript module MIME types
 AddType application/javascript .js
 AddType application/javascript .mjs
+AddType application/javascript .ts
+AddType application/javascript .tsx
+
+# Force JavaScript MIME type
+<FilesMatch "\.(js|mjs|ts|tsx)$">
+    ForceType application/javascript
+</FilesMatch>
 
 # Enable strict MIME type checking
 <IfModule mod_headers.c>
@@ -23,4 +30,14 @@ AddType application/javascript .mjs
     AddOutputFilterByType DEFLATE application/rss+xml
     AddOutputFilterByType DEFLATE application/javascript
     AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# Handle SPA routing
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
 </IfModule> 
